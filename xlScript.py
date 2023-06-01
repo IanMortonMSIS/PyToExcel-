@@ -1,6 +1,21 @@
 import os
 from openpyxl import Workbook, load_workbook
 
+# open the excel file
+wb = openpyxl.load_workbook('example.xlsx')
+
+# get the active sheet
+sheet = wb.active
+
+# loop through the rows
+for row in sheet.iter_rows(min_row=1, max_row=sheet.max_row):
+    # get the value of the first column
+    softwareName = row[0].value
+    # get the value of the second column
+    softwareT1 = row[1].value
+    # save the values to variables
+    softwareName = softwareName
+    softwareT1 = softwareT1
 
 def store_info():
     # Ask the user for the software information
